@@ -1,0 +1,12 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "RS School Node.js File Manager Task",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./"
+  },
+  "author": "Nikolay Kozyrev",
+  "license": "ISC",
+  "type": "module"
+}
