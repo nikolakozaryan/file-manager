@@ -1,0 +1,15 @@
+import { createReadStream, createWriteStream } from "fs";
+import { pipeline } from "stream/promises";
+import { resolve, basename } from "path";
+
+export async function cp([pathToFile, pathToDirectory]) {
+  const resolvedPathToFile = resolve(pathToFile);
+  const fileName = basename(resolvedPathToFile);
+
+  const [source, destination] = [
+    createReadStream(resolvedPathToFile),
+    createWriteStream(resolve(pathToDirectory, fileName)),
+  ];
+
+  await pipeline(source, destination);
+}
