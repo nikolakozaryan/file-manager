@@ -26,7 +26,7 @@ export async function validateCommand(command) {
 
         [isFile, isDirectory] = [fileStat.isFile(), fileStat.isDirectory()];
       } catch {
-        throw new SyntaxError();
+        throw new Error();
       }
     }
 
