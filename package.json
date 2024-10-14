@@ -4,7 +4,7 @@
   "description": "RS School Node.js File Manager Task",
   "main": "src/index.js",
   "scripts": {
-    "start": "node ./"
+    "start": "node ./src/index.js"
   },
   "author": "Nikolay Kozyrev",
   "license": "ISC",
